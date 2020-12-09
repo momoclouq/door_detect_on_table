@@ -48,8 +48,9 @@ function pipeGenerating () {
     }
     for (let pipe of Pipes) {
         if (pipe.get(LedSpriteProperty.X) == bird.get(LedSpriteProperty.X) && pipe.get(LedSpriteProperty.Y) == bird.get(LedSpriteProperty.Y)) {
-            game.gameOver()
-            GameStart = false
+            basic.showIcon(IconNames.No)
+            basic.pause(100)
+            control.reset()
         }
     }
     gapBetweenPipes += 1
